@@ -1,6 +1,13 @@
 const Book = require("../models/Book");
 
 // Add new book
+//  method [ post] : http://localhost:8000/api/books
+// {
+//     "title": "too good to be true",
+//     "author": "C.S.Yashod",
+//     "publishedYear": 2025,
+//     "genre": "Fiction"
+//   }
 exports.createBook = async (req, res) => {
   try {
     const book = await Book.create(req.body);
